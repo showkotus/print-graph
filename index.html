@@ -1,0 +1,698 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+	<script>
+		window.onload = function () {
+
+			let chart = new CanvasJS.Chart("chartContainer", {
+
+				animationEnabled: true,
+				exportEnabled: true,
+				theme: "light1", // "light1", "light2", "dark1", "dark2"
+				title: {
+					text: "Simple Column Chart with Index Labels"
+				},
+				axisY: {
+					includeZero: true
+				},
+				data: [{
+					type: "column", //change type to bar, line, area, pie, etc
+					//indexLabel: "{y}", //Shows y value on all Data Points
+					indexLabelFontColor: "#5A5757",
+					indexLabelFontSize: 16,
+					indexLabelPlacement: "outside",
+					dataPoints: [
+						{ x: 10, y: 71 },
+						{ x: 20, y: 55 },
+						{ x: 30, y: 50 },
+						{ x: 40, y: 65 },
+						{ x: 50, y: 92, indexLabel: "\u2605 Highest" },
+						{ x: 60, y: 68 },
+						{ x: 70, y: 38 },
+						{ x: 80, y: 71 },
+						{ x: 90, y: 54 },
+						{ x: 100, y: 60 },
+						{ x: 110, y: 36 },
+						{ x: 120, y: 49 },
+						{ x: 130, y: 21, indexLabel: "\u2691 Lowest" }
+					]
+				}]
+			});
+			chart.render();
+
+		}
+	</script>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script type="text/javascript">
+		function printpage() {
+			//Get the print button and put it into a variable
+			var printButton = document.getElementById("printpagebutton");
+			//Set the print button visibility to 'hidden' 
+			printButton.style.visibility = 'hidden';
+			//Print the page content
+			window.print()
+			//Set the print button to 'visible' again 
+			//[Delete this line if you want it to stay hidden after printing]
+			printButton.style.visibility = 'visible';
+		}
+	</script>
+
+
+</head>
+
+<body style="height: 300px; max-width: 920px; max-height: 29.62cm; margin: 0px auto;" class="border-4 border-sky-500 ">
+
+	<div>
+		<div className='bg-slate-500 container  flex '>
+			<p className='text-white text-[12px]'>LAB RSLT ENTRY DLAB Lab result entry & Reporting</p>
+			<button id="printpagebutton" class="bg-blue-100 px-3 py-2 border-4 border-sky-500 rounded-lg"
+				onclick="printpage()">Print</button>
+
+		</div>
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+		<form class="text-[12px] border-4 bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill Date & Time:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="31/12/23 12:60 AM"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample Collected:
+					</label>
+					<input type="checkbox" name="" id="" size="14" class="text-center" />
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="31/12/23 12:60 AM"
+						class="text-red-600 font-semibold mx-2" />
+				</div>
+
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Receive at Lab:
+					</label>
+					<input type="checkbox" name="" id="" size="14" class="text-center" />
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="31/12/23 12:60 AM"
+						class="text-red-600 font-semibold mx-2" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Draft Time:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="31/12/23 12:60 AM"
+						class="text-red-600 font-semibold mx-2" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Varified:
+					</label>
+					<input type="checkbox" name="" id="" size="14" class="text-center" />
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="31/12/23 12:60 AM"
+						class="text-red-600 font-semibold mx-2" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Printed:
+					</label>
+					<input type="checkbox" name="" id="" size="14" class="text-center" />
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="31/12/23 12:60 AM"
+						class="text-red-600 font-semibold mx-2" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Expected Delivery Time:
+					</label>
+					<input type="checkbox" name="" id="" size="14" class="text-center" />
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="31/12/23 12:60 AM"
+						class="text-red-600 font-semibold mx-2" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Delivered:
+					</label>
+					<input type="checkbox" name="" id="" size="14" class="text-center" />
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div id="chartContainer" style="height: 600px; max-width: 920px; margin: 0px auto;" class=""></div>
+
+	<div class=" bg-blue-100 px-3 py-2 border-4 border-sky-500 rounded-lg pt-5">
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+		<form class="text-[12px] bg-blue-100">
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bill:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="D123456789"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample ID:
+					</label>
+					<input type="text" name="" id="" size="10" defaultValue="" placeholder="1234567890000"
+						class="text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Routine Pat:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="lutfar rahman" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<input type="text" name="" id="" size="1" defaultValue="" placeholder="M"
+						class="text-center text-red-600 font-semibold" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Age:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="82 Y 00 M 00 D" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Contact No:
+					</label>
+					<input type="text" name="" id="" size="12" defaultValue="" placeholder="1234567898888" class="" />
+				</div>
+			</div>
+			<div class="flex justify-between">
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Ref. By:
+					</label>
+					<input type="text" name="" id="" size="40" defaultValue=""
+						placeholder="DR. SHOHSG HOSSAIN D.M.F MCH.M.L.O.P" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Sample:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="Blood" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Adm. No:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+				<div class="bg-blue-100 p-1 mr-1">
+					<label htmlFor="bill" class="">
+						Bed:
+					</label>
+					<input type="text" name="" id="" size="7" defaultValue="" placeholder="N/A" class="" />
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+		integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+		crossorigin="anonymous"></script>
+</body>
+<script src="canvasjs.min.js"></script>
+</body>
+
+</html>
